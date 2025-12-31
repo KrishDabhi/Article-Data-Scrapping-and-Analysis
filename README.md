@@ -1,7 +1,7 @@
 # 🧠 BlackCoffer Text Analysis Engine
 
 > **Automated Web Article Scraper + Sentiment & Readability Analyzer**  
-> Built for the [Assignment] — extracting insights from online articles using NLP, custom dictionaries, and linguistic rules.
+> Built for the extracting insights from online articles using NLP, custom dictionaries, and linguistic rules.
 
 ![Python](https://img.shields.io/badge/Python-3.12.5%2B-blue?logo=python)
 ![Pandas](https://img.shields.io/badge/Pandas-Data_Analysis-green)
