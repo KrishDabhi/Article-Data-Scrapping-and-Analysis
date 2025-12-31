@@ -1,52 +1,66 @@
-# 🧠 BlackCoffer Text Analysis Engine
+# 🧠 Blackcoffer Text Analysis Engine
 
-> **Automated Web Article Scraper + Sentiment & Readability Analyzer**  
-> Built for the extracting insights from online articles using NLP, custom dictionaries, and linguistic rules.
+> **Automated Article Scraper and Text Analyzer for Blackcoffer Assignment**  
+> A Python solution that extracts article content from URLs and computes 13 linguistic variables as specified in the Blackcoffer test assignment.
 
-![Python](https://img.shields.io/badge/Python-3.12.5%2B-blue?logo=python)
-![Pandas](https://img.shields.io/badge/Pandas-Data_Analysis-green)
-![BeautifulSoup](https://img.shields.io/badge/BeautifulSoup-Web_Scraping-orange)
+![Python](https://img.shields.io/badge/Python-3.8%2B-blue?logo=python)
+![Pandas](https://img.shields.io/badge/Pandas-Data_Analysis-green?logo=pandas)
+![BeautifulSoup](https://img.shields.io/badge/BeautifulSoup-Web_Scraping-orange?logo=beautifulsoup)
 ![License](https://img.shields.io/badge/License-MIT-purple)
 
 ---
 
-## 🎯 Objective
+## 📌 Assignment Overview (Per `Objective.docx`)
 
-Given a list of URLs, this project:
-1. **Scrapes** clean article text from each webpage  
-2. **Analyzes** it using official BlackCoffer dictionaries:
-   - ✅ `positive-words.txt`
-   - ✅ `negative-words.txt`
-   - ✅ 7 `StopWords_*.txt` files
-3. **Computes 13+ linguistic & sentiment metrics** per article  
-4. **Exports results** to a structured Excel report
+This project fulfills the **Blackcoffer Data Extraction and NLP Test Assignment** with the following requirements:
 
-Perfect for **sentiment analysis**, **readability scoring**, and **content intelligence** tasks.
+1. **Data Extraction**  
+   - Read URLs from `Input.xlsx` (columns: `URL_ID`, `URL`)  
+   - For each URL, **extract only the article title and article body text**  
+   - **Exclude** website headers, footers, navigation, ads, or any non-article content  
+   - Save each extracted article as a plain text file named `{URL_ID}.txt`
+
+2. **Data Analysis**  
+   - For each extracted text file, compute **13 specific variables**:
+     1. POSITIVE SCORE  
+     2. NEGATIVE SCORE  
+     3. POLARITY SCORE  
+     4. SUBJECTIVITY SCORE  
+     5. AVG SENTENCE LENGTH  
+     6. PERCENTAGE OF COMPLEX WORDS  
+     7. FOG INDEX  
+     8. AVG NUMBER OF WORDS PER SENTENCE  
+     9. COMPLEX WORD COUNT  
+     10. WORD COUNT  
+     11. SYLLABLE PER WORD  
+     12. PERSONAL PRONOUNS  
+     13. AVG WORD LENGTH  
+   - Variable definitions are specified in the assignment’s `Text Analysis.docx` (not provided here; implementation follows standard linguistic interpretations where needed)
+
+3. **Output**  
+   - Generate a single output file (Excel or CSV) containing:
+     - All original columns from `Input.xlsx` (`URL_ID`, `URL`)
+     - Followed by the **13 computed variables in exact order** as shown in `Output Data Structure.xlsx`
+
+4. **Technical Requirements**  
+   - Entirely implemented in **Python**  
+   - Allowed libraries: `BeautifulSoup`, `Selenium`, `Scrapy`, or any Python web scraping/NLP tools  
+   - Final submission must include:
+     - A `.py` script
+     - Output file (CSV or Excel)
+     - Documentation explaining approach, usage, and dependencies
 
 ---
 
 ## 📁 Project Structure
 
 ```text
-project-task/
+blackcoffer-assignment/
 ├── input/
-│   └── Input.xlsx                 # 📥 Input: URL_ID + URLs
+│   └── Input.xlsx                 # Provided input file (URL_ID + URL)
 ├── output/
-│   └── output.xlsx                # 📤 Final analysis report (auto-generated)
-├── articles/                      # 🗃️ Temporary scraped .txt files (DO NOT SUBMIT)
-├── MasterDictionary/
-│   ├── positive-words.txt         # ✅ Official positive lexicon
-│   └── negative-words.txt         # ❌ Official negative lexicon
-├── StopWords/                     # 🛑 All 7 stopword lists
-│   ├── StopWords_Auditor.txt
-│   ├── StopWords_Currrencies.txt
-│   ├── StopWords_DatesandNumbers.txt
-│   ├── StopWords_Generic.txt
-│   ├── StopWords_GenericLong.txt
-│   ├── StopWords_Geographic.txt
-│   └── StopWords_Names.txt
-├── scraper.py                     # 🕷️ Web content extractor
-├── analysis.py                    # 📊 NLP + metric calculator
-├── main.py                        # 🚀 Orchestration engine
-├── requirements.txt               # ⚙️ Dependencies
-└── README.md                      # 📘 You are here!
+│   └── output.xlsx                # Generated output (matches required structure)
+├── articles/                      # Temporary storage for {URL_ID}.txt files
+├── main.py                        # Main script: scraping + analysis
+├── requirements.txt               # Python dependencies
+└── README.md                      # This documentation
