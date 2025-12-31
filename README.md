@@ -3,7 +3,7 @@
 > **Automated Web Article Scraper + Sentiment & Readability Analyzer**  
 > Built for the [BlackCoffer Internship Assignment](https://blackcoffer.com/) — extracting insights from online articles using NLP, custom dictionaries, and linguistic rules.
 
-![Python](https://img.shields.io/badge/Python-3.7%2B-blue?logo=python)
+![Python](https://img.shields.io/badge/Python-3.12.5%2B-blue?logo=python)
 ![Pandas](https://img.shields.io/badge/Pandas-Data_Analysis-green)
 ![BeautifulSoup](https://img.shields.io/badge/BeautifulSoup-Web_Scraping-orange)
 ![License](https://img.shields.io/badge/License-MIT-purple)
