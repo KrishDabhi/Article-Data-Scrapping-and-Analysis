@@ -1,9 +1,9 @@
-# 🧠 Blackcoffer Text Analysis Engine
+# 🧠Article Data scapping and Analysis Engine
 
 > **Automated Article Scraper and Text Analyzer for Blackcoffer Assignment**  
 > A Python solution that extracts article content from URLs and computes 13 linguistic variables as specified in the Blackcoffer test assignment.
 
-![Python](https://img.shields.io/badge/Python-3.8%2B-blue?logo=python)
+![Python](https://img.shields.io/badge/Python-3.12.3%2B-blue?logo=python)
 ![Pandas](https://img.shields.io/badge/Pandas-Data_Analysis-green?logo=pandas)
 ![BeautifulSoup](https://img.shields.io/badge/BeautifulSoup-Web_Scraping-orange?logo=beautifulsoup)
 ![License](https://img.shields.io/badge/License-MIT-purple)
